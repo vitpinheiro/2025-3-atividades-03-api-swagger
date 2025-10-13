@@ -74,6 +74,7 @@ A API possui os seguintes endpoints:
 - [ ] Criar o documento Swagger com `SwaggerModule.createDocument()`
 - [ ] Configurar a rota de acesso ao Swagger UI (sugestão: `/api-docs`)
 - [ ] Testar o acesso ao Swagger UI em `http://localhost:3000/api-docs`
+- [ ] Guardar as modificações com `git commit -m "configurado o ambiente swagger"`
 
 ### 3️⃣ Documentação da Entidade Task
 - [ ] Abrir o arquivo `src/tasks/task.entity.ts`
@@ -91,6 +92,7 @@ A API possui os seguintes endpoints:
 - [ ] Adicionar `@ApiProperty()` para o campo `updatedAt`:
   - Adicionar description, type
 - [ ] Verificar a documentação da entidade no Swagger UI
+- [ ] Guardar as modificações com `git commit -m "documentado as entidades"`
 
 ### 4️⃣ Documentação do CreateTaskDto
 - [ ] Abrir o arquivo `src/tasks/dto/create-task.dto.ts`
@@ -114,6 +116,7 @@ A API possui os seguintes endpoints:
 - [ ] Adicionar `@ApiPropertyOptional()` para o campo `status`:
   - Adicionar enum, description, example
 - [ ] Verificar a documentação do DTO no Swagger UI (schema UpdateTaskDto)
+- [ ] Guardar as modificações com `git commit -m "documentado os DTOs"`
 
 ### 6️⃣ Documentação do Endpoint Raiz
 - [ ] Abrir o arquivo `src/app.controller.ts`
@@ -125,6 +128,7 @@ A API possui os seguintes endpoints:
 - [ ] Documentar o endpoint `GET /`:
   - Adicionar `@ApiOperation()` com summary e description
   - Adicionar `@ApiResponse()` para status 200 com description
+- [ ] Guardar as modificações com `git commit -m "documentado o endpoint raiz"`
 
 ### 7️⃣ Documentação dos Endpoints de Tarefas - Listar Todas
 - [ ] Abrir o arquivo `src/tasks/tasks.controller.ts`
@@ -166,6 +170,7 @@ A API possui os seguintes endpoints:
   - Adicionar `@ApiParam()` para o parâmetro `id`
   - Adicionar `@ApiResponse()` para status 204 com description
   - Adicionar `@ApiResponse()` para status 404 com description
+- [ ] Guardar as modificações com `git commit -m "documentado o endpoint de tarefas(\tasks)"`
 
 ### 1️⃣2️⃣ Testes e Validação Final
 - [ ] Executar `npm run start:dev` e acessar o Swagger UI
@@ -183,6 +188,9 @@ A API possui os seguintes endpoints:
 - [ ] Fazer commit das alterações
 - [ ] Fazer push para o repositório fork
 - [ ] Criar um Pull Request (opcional, para revisão)
+
+
+- [ ] Publicar modificações no repositório com `git push`
 
 ## 📖 Recursos Úteis
 
