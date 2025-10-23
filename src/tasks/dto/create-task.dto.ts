@@ -1,16 +1,34 @@
-import { IsString, IsEnum, IsNotEmpty, IsOptional } from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { TaskStatus } from '../task.entity';
+import { IsString, IsOptional, IsEnum, Length } from 'class-validator';
 
 export class CreateTaskDto {
+  @ApiProperty({
+    description: 'Título da tarefa',
+    example: 'Estudar NestJS',
+    minLength: 3,
+    maxLength: 100,
+  })
   @IsString()
-  @IsNotEmpty()
+  @Length(3, 100)
   title: string;
 
-  @IsString()
-  @IsNotEmpty()
-  description: string;
-
-  @IsEnum(TaskStatus)
+  @ApiProperty({
+    description: 'Descrição detalhada da tarefa',
+    example: 'Rever módulos de controllers e providers',
+    required: false,
+  })
   @IsOptional()
+  @IsString()
+  description?: string;
+
+  @ApiPropertyOptional({
+    description: 'Status inicial da tarefa',
+    enum: TaskStatus,
+    default: TaskStatus.ABERTO,
+    example: TaskStatus.ABERTO,
+  })
+  @IsOptional()
+  @IsEnum(TaskStatus)
   status?: TaskStatus;
 }
